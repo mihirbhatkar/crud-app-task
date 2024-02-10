@@ -15,7 +15,7 @@ const cors = require("cors");
 
 app.use(
 	cors({
-		origin: ["https://todo-app-task.vercel.app"],
+		origin: ["https://mb-todos.vercel.app"],
 		methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
 		credentials: true,
 	})
