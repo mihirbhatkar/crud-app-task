@@ -1,6 +1,20 @@
 # crud-app-task
 
-### Objectives
+### Technologies used
+Frontend - React, TailwindCSS, DaisyUI
+
+Backend - Express.js, Node.js
+
+Database - MongoDB
+
+Tools - Redux, Redux Toolkit
+
+### Description
+I have implemented the MERN app as required. All CRUD operations have been implemented. Used tailwindcss and daisyui for styling. Server has been written in express. 
+
+For handling state management in React, I have used Redux. Instead of using Redux Thunk, I have used Redux Toolkit's inbuilt middleware that they provide to handle async requests. I felt like it fit my project better, it is doing the same thing as Redux Thunk but with different syntax. And instead of using axios for querying the server, I have used Redux RTK query. 
+
+### Objectives to be met
 1. Use of Redux Toolkit and Redux thunk for state management and querying the server is
 advised.
 2. Server must be written in Express.
