@@ -11,6 +11,16 @@ const port = process.env.PORT_NO || 5000;
 
 const app = express();
 
+const cors = require("cors");
+
+app.use(
+	cors({
+		origin: ["https://todo-app-task.vercel.app"],
+		methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
+		credentials: true,
+	})
+);
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 

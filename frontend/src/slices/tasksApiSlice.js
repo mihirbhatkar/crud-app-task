@@ -1,44 +1,43 @@
 // expensesApiSlice.js
 import { apiSlice } from "./apiSlice";
 
+const TASKS_URL = "https://todo-app-task-api.vercel.app/api";
+
 export const tasksApiSlice = apiSlice.injectEndpoints({
 	endpoints: (builder) => ({
 		getAllTasks: builder.mutation({
 			query: () => ({
-				url: `/api`,
+				url: `${TASKS_URL}`,
 				method: "GET",
 			}),
 		}),
 
-		// Add a new task
 		addTask: builder.mutation({
 			query: (data) => ({
-				url: `/api`,
+				url: `${TASKS_URL}`,
 				method: "POST",
 				body: data,
 			}),
 		}),
 
-		// Update an existing task
 		updateTask: builder.mutation({
 			query: ({ taskId, data }) => ({
-				url: `/api/${taskId}`,
+				url: `${TASKS_URL}/${taskId}`,
 				method: "PUT",
 				body: data,
 			}),
 		}),
 
-		// Delete a task
 		deleteTask: builder.mutation({
 			query: (taskId) => ({
-				url: `/api/${taskId}`,
+				url: `${TASKS_URL}/${taskId}`,
 				method: "DELETE",
 			}),
 		}),
 
 		clearAllTasks: builder.mutation({
 			query: () => ({
-				url: `/api/clear`,
+				url: `${TASKS_URL}/clear`,
 				method: "DELETE",
 			}),
 		}),
